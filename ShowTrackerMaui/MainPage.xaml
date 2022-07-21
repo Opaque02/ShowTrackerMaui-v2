@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShowTrackerMaui.MainPage">
+			 
+    <!--<ScrollView>
+        <VerticalStackLayout 
+            Spacing="25" 
+            Padding="30,0" 
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+                
+            <Label 
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            
+            <Label 
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button 
+                x:Name="CounterBtn"
+                Text="Click me"
+                WidthRequest="150"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="LabelChanger"
+                Text="This is a test"
+                FontSize="32"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+
+    <Grid RowDefinitions="9*, 1*"
+          RowSpacing="5">
+        <BoxView Color="Green" 
+                 Grid.Row="0"></BoxView>
+        <BoxView Color="Grey"
+                 Grid.Row="1"></BoxView>
+        <Grid Grid.Row="1"
+              ColumnDefinitions="1*, 1*, 1*"
+              ColumnSpacing="5"
+              Padding="10, 0">
+            <!--<BoxView Grid.Column="0" Color="Blue"></BoxView>-->
+            <Button 
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Button
+                Grid.Column="1"
+                x:Name="ClickMe"
+                Text="Click me"
+                BackgroundColor="Blue"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="ClickedEvent"
+                HorizontalOptions="Center" />
+            <BoxView Grid.Column="2" Color="Cyan"></BoxView>
+        </Grid>
+    </Grid>
+
+</ContentPage>
